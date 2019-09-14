@@ -1,0 +1,22 @@
+/* miniprogram/pages/test/test.wxss */
+button {
+    background-color:burlywood;
+}
+
+.container {
+    background-color:cadetblue;
+    display: flex;
+    flex-direction: row;
+}
+
+.v1 {
+    background-color: #999;
+}
+
+.v2 {
+    background-color: #333;
+}
+
+.v3 {
+    background-color: #666;
+}

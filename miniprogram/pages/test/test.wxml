@@ -1,0 +1,30 @@
+<!--miniprogram/pages/test/test.wxml-->
+<text>云数据库</text>
+<button bindtap="insert">向云数据库插入数据</button>
+<button bindtap="update">更新云数据库指定数据</button> <!--通过唯一标识_id找到指定数据-->
+<button bindtap="search">查找云数据库指定数据</button> <!--通过键名: 键值找到指定数据-->
+<button bindtap="delete">删除云数据库指定数据</button> <!--通过唯一标识_id找到指定数据-->
+
+<text>云函数</text>
+<button bindtap="useSum">调用sum云函数</button>
+<button bindtap="getInfo">调用login云函数</button>
+<button bindtap="doBatchDelete">调用batchDelete云函数</button>
+
+<text>云存储</text>
+<button bindtap="update">上传图片</button>
+<button bindtap="showMyImgs">展示我上传过的所有图片</button>
+<block wx:for="{{ imgsData }}" wx:for-item="imgData" wx:key="index">
+    <image src="{{ imgData.fileID }}"></image>
+    <button size="mini" catchtap="downLoad" data-fileid="{{ imgData.fileID }}">点击下载</button>
+    <!-- 注意，这里需要用data-xxx自定义属性的形式将要下载的那个fileID从视图层传到数据层 -->
+</block>
+
+<text>易班接口测试</text>
+<button catchtap="http">http</button>
+
+<text>view标签测试</text>
+<view class="container">
+    <view class="v1">1</view>
+    <view class="v2">2</view>
+    <view class="v3">3</view>
+</view>
